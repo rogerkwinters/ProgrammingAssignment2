@@ -64,7 +64,8 @@ cacheSolve <- function(x, ...) {
         }
         
         ##
-        ## get the matrix, calcalate the inverse, and then cache the results
+        ## get the matrix, calculate the it's inverse, and then cache the results; note that we assume
+        ## the matrix is non-singular, eg., invertable
         ##
         data <- x$get()
         m <- solve(data, ...)
