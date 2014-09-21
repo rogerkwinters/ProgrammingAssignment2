@@ -5,6 +5,7 @@
 
 ##
 ## Creates a special "matrix" object that can cache its inverse
+## The input is a non-singular matrix, eg., one with a non-zero determinant
 ##
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -50,7 +51,7 @@ cacheSolve <- function(x, ...) {
         ##
         
         ##
-        ## check the matrix inverse state
+        ## check the matrix inverse state to see if it has already been calculated
         ##
         m <- x$getmatrix()
         
